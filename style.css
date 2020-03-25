@@ -1,0 +1,105 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.inputRegEx{ text-align: center; }
+.inputRegEx h2{
+	margin:5%;
+	margin-top:2%;
+}
+.inputRegEx p{	display: inline; }
+.inputRegEx button{
+	margin:10px;
+	padding:5px;
+	outline: none;
+}
+.inputRegEx input{
+	margin-left:10px;
+	padding:0.7%;
+	width:40vw;
+}
+.otpFA , .divHolder1{	clear:both; padding: 1% 0.3%;}
+
+.internalOtp , .inpDiv{
+	border: 1px solid black;
+	padding:1vw;
+	float:left;
+	clear:both;
+	width:100%;
+	margin:2vw 0.1%;
+}
+.wrapperO{text-align: center;}
+.spanLabel{display: inline-block;text-align: center;}
+.textQ { padding:1px;}
+.wrapperO button{padding:3px;outline: none;}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	.inputRegEx h2{  font-size:5vw; }
+	.inputRegEx p{ font-size:4.2vw; }
+	.inputRegEx button{ font-size: 3.5vw; }
+	.inputRegEx input{  font-size:3.5vw;}
+	.textQ { width:13.5vw; margin: 1vw 2vw;font-size: 5vw;}
+	.spanLabel {width:13.5vw; margin: 1vw 2vw;font-size: 5vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 5vw;}
+}
+@media only screen and (min-width: 400px) {
+  body {background-color: pink;}
+  	.inputRegEx h2{  font-size:4.5vw; }
+	.inputRegEx p{ font-size:3.3vw; }
+	.inputRegEx button{ font-size: 2.8vw; }
+	.inputRegEx input{  font-size:3vw;}
+	.textQ { width:14vw; margin: 1vw 2vw;font-size: 4vw;}
+	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 4vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 4vw;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ body {background-color: yellow;}
+ 	.inputRegEx h2{  font-size:4vw; }
+	.inputRegEx p{ font-size:3.2vw; }
+	.inputRegEx button{ font-size: 3vw; }
+	.inputRegEx input{  font-size:3vw;}
+	.internalOtp{clear:none;width:33%;}
+	.textQ { width:14vw; margin: 1vw 2vw;font-size: 2.8vw;}
+	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 2.8vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 2.8vw;}
+	.inpDiv{clear:none;width:49%;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {background-color: green;}
+  	.inputRegEx h2{  font-size:3.9vw; }
+	.inputRegEx p{ font-size:2.8vw; }
+	.inputRegEx button{ font-size: 2.3vw; }
+	.inputRegEx input{  font-size:2.4vw; width:30vw;}
+	.textQ { width:14vw; margin: 1vw 2vw;font-size: 2.2vw;}
+	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 2.2vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 2.2vw;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ body {background-color: blue;}
+ 	.inputRegEx h2{  font-size:3.4vw; }
+	.inputRegEx p{ font-size:2.3vw; }
+	.inputRegEx button{ font-size: 1.8vw; }
+	.inputRegEx input{  font-size:1.8vw; }
+	.textQ { width:12vw; margin: 1vw 2vw;font-size: 1.8vw;}
+	.spanLabel {width:12vw; margin: 1vw 2.5vw;font-size: 1.8vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 1.8vw;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  	body{background-color: pink;}
+  	.inputRegEx h2{  font-size: 2.5vw; }
+	.inputRegEx p{ font-size: 1.9vw; }
+	.inputRegEx button{ font-size: 1.5vw; }
+	.inputRegEx input{  font-size: 1.5vw; width:26vw;}
+	.textQ { width:10vw; margin: 1vw 2vw;font-size: 1.5vw;}
+	.spanLabel {width:10vw; margin: 1vw 2.5vw;font-size: 1.5vw;}
+	.rowLabel , .wrapperO button , .inpDiv p{font-size: 1.5vw;}
+}
