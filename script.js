@@ -1,20 +1,3 @@
-function regExToFAGUI(){
-	var titleH2 = document.createElement("h2");
-	titleH2.innerHTML = "Regular Expression To Finite Automata Converter";
-	document.body.appendChild(titleH2);
-	var t1Para = document.createElement("p");
-	t1Para.innerHTML = "Enter Regular Expression";
-	var t2Input = document.createElement("input");
-	t2Input.setAttribute("name","regExp");
-	t2Input.setAttribute("type","text");
-	t2Input.setAttribute("value","Regular Expression");
-	document.body.appendChild(t2Input);
-
-}
-
-
-
-
 class State{
 	constructor(a){ 
 		this.name = a;// a is name of state
@@ -99,7 +82,8 @@ class FA{
 		}
 		text = text.concat("<br/>Alphabets:<br/>",this.inputs);
 		var para = document.getElementById(printConsole);
-		para.innerHTML = text;
+		text = "<div style='text-align:left;'><br/>" + text + "</div>";
+		para.innerHTML += text;
 	}
 }
 
@@ -207,17 +191,20 @@ function convertNFA(inpFA,T){
 
 var numStates,numInputs,inputSymbols;
 
-function cont(){
+function cont(argV){
 	numStates = document.getElementsByName("nState")[0].value;
 	numInputs = document.getElementsByName("nInputs")[0].value;
 	inputSymbols = document.getElementsByName("inputSymbols")[0].value.split(",");
-	document.getElementById("formI").remove();
-	var hs = "";
+	document.getElementsByClassName("inpFormWrapper")[0].remove();
+	var hs = "<span class='rowLabel'> </span>";
+	var formNewI = document.createElement("div");
+	//temp1.setAttribute("class","rowLabel");
+	//formNewI.appendChild(temp1);
 	for(var i = 0; i < numInputs;i++){
 		hs += "<span class='spanLabel'>" + inputSymbols[i] + "</span>" ; 
 	}
 	//console.log(hs);
-	var formNewI = document.createElement("div");
+
 	formNewI.innerHTML = hs;
 	
 	formNewI.appendChild(document.createElement("br"));
@@ -229,7 +216,7 @@ function cont(){
 		for(var j = 0; j < numInputs;j++){
 			var it = document.createElement("input");
 			it.setAttribute("type","text");
-			it.setAttribute("name","transQ" + j);
+			it.setAttribute("name","transQ" + i);
 			it.setAttribute("class","textQ");
 		
 			formNewI.appendChild(it);
@@ -251,7 +238,7 @@ function cont(){
 	formNewI.appendChild(document.createElement("br"));
 	var u = document.createElement("button");
 	u.innerHTML = "Submit";
-	u.setAttribute("onclick","return inpToTrans()");
+	u.setAttribute("onclick","return inpToTrans("+ argV.toString(10)+")");
 	formNewI.appendChild(u);
 	var kt = document.createElement("div");
 	kt.setAttribute("class","wrapperO");
@@ -271,30 +258,48 @@ function getSelectValues(select) {
   return result;
 }
 
-function inpToTrans(){
+function inpToTrans(argV){
 	var divHolder1 = document.createElement("div");
 	divHolder1.setAttribute("class","divHolder1");
-	for(var i=0;i<2;i++){
+	/*LEFT COLUMN*/
 		var inpDiv = document.createElement("div");
 		inpDiv.setAttribute("class","inpDiv");
+		inpDiv.setAttribute("id","inpDiv1");
 		var h3I = document.createElement("h3");
-		h3I.innerHTML = "NFA With Epsilon";
+		if(argV == 0)
+			h3I.innerHTML = "NFA With Epsilon";
+		else
+			h3I.innerHTML = "NFA Without Epsilon";
 		var pI = document.createElement("p");
-		pI.innerHTML = "HELLO";
+		//pI.innerHTML = "HELLO";
 		inpDiv.appendChild(h3I);
 		inpDiv.appendChild(pI);
 		divHolder1.appendChild(inpDiv);
-	}
-	document.body.appendChild(divHolder1);
+	/*RIGHT COLUMN*/
+		inpDiv = document.createElement("div");
+		inpDiv.setAttribute("class","inpDiv");
+		inpDiv.setAttribute("id","inpDiv2");
+		h3I = document.createElement("h3");
+		if(argV == 0)
+			h3I.innerHTML = "NFA Without Epsilon";
+		else
+			h3I.innerHTML = "DFA";
+		pI = document.createElement("p");
+		//pI.innerHTML = "HELLO";
+		inpDiv.appendChild(h3I);
+		inpDiv.appendChild(pI);
+		divHolder1.appendChild(inpDiv);
+	document.getElementsByClassName("wrapperO")[0].appendChild(divHolder1);
 	T = []
 	for(var i=0;i<numStates;i++){
-		var q = document.getElementsByName("transQ" + i);
+		var q = document.getElementsByName("transQ" + i.toString(10));
 		L = []
 		for(var j=0;j<numInputs;j++){
 			L.push(getSelectValues(q[j].value));
 		}
 		T.push(L);
 	}
+	console.log("A");
 	console.log(T);
 	var q = document.getElementsByName("finalState")[0];
 	var F = getSelectValues(q.value);
@@ -303,10 +308,48 @@ function inpToTrans(){
 	var f1 = new FA(numStates,inputSymbols,numInputs); //initializes automata object variables
 	f1.statesMaker(0,F); //creates state objects for the automata
 	f1.setTransition(T); // sets transition between automata states as entered in matrix T
-	/*
-	//f1.printTransitionTable("inputTransTable");
+	f1.printTransitionTable("inpDiv1");
 	nfa_without_eps = convertNFA(f1,T);
+	console.log(nfa_without_eps);
+	nfa_without_eps.printTransitionTable("inpDiv2");
+	/*
+	
 	//nfa_without_eps.printTransitionTable("outputTransTable");
 */
+	return false;
+}
+
+function convtRegFA(){
+	var regExp = document.getElementsByName("regExp")[0];
+	var t = document.getElementsByClassName("internalOtp");
+	var tC = '<h3>NFA With Epsilon</h3><br/>				<p> Q1 -> Q3					<br/>Q1 -> Q3					<br/><br/>Q1 -> Q3Q0 -> NULL <br/>Q1 -> Q3					<br/>Q1 -> Q3					<br/>Q1 -> Q3					<br/><br/>Q1 -> Q3Q0 -> NULL <br/>Q1 -> Q3					<br/>Q1 -> Q3					<br/>Q1 -> Q3					<br/><br/>Q1 -> Q3					<br/>Q1 -> Q3Q0 -> NULL <br/>Q1 -> Q3					<br/><br/>Q1 -> Q3Q0 -> NULL <br/>Q1 -> Q3					<br/>Q1 -> Q3				</p>';
+	for(var i = 0;i<t.length;i++){
+		t[i].innerHTML = tC;
+	}
+	return false;
+}
+
+function menu1(){
+	document.getElementsByClassName("mainMenu")[0].remove();
+	document.body.innerHTML += menu1HTML;
+	return false;
+}
+
+function menu2(){
+	document.getElementsByClassName("mainMenu")[0].remove();
+	document.body.innerHTML += menu2HTML;
+	return false;
+}
+
+function menu3(){
+	document.getElementsByClassName("mainMenu")[0].remove();
+	document.body.innerHTML += menu3HTML;
+	return false;
+}
+
+function backToMainMenu(){
+	var temp = document.getElementsByTagName("div");
+	temp[0].remove();
+	document.body.innerHTML += mainMenuHTML;
 	return false;
 }
