@@ -1,6 +1,6 @@
 # Regular Expression To Finite Automata Converter Web App
 
-This is a Web App build using HTML , CSS , JavaScript , RaphaelJS Library ,etc which converts Regular Expressions to Finite Automata.
+This is a Web App build using HTML , CSS , JavaScript ,etc which converts Regular Expressions to Finite Automata.
 
 Functions performed by the Web App :
 
@@ -16,5 +16,4 @@ Tools/Concepts Implemented :
 1. Graphs (Bread First Search Traversal)
 2. Data Structures and Algorithms
 3. Theory Of Computation (Finite Automatas and Regular Expressions)
-4. RaphaelJS Library for Visualization
-5. HTML , CSS , JavaScript
+4. HTML , CSS , JavaScript
