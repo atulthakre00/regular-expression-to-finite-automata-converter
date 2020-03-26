@@ -3,6 +3,43 @@
 	padding:0;
 	box-sizing: border-box;
 }
+.mainMenu {
+	text-align: center;
+	clear:both;	
+}
+.mainBack{
+	display:inline-block;
+	cursor:pointer;
+	background-color: black;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	padding:5px;
+	margin:4px;
+	width:20%;
+	max-width:140px;
+	float:left;
+	font-size:20px;
+}
+
+.inputRegExWrapper , .inpFormWrapper{
+	clear:both;
+}
+.inpFormWrapper{
+	text-align: center;
+}
+.mainHead{
+	text-align: center;
+	display: inline-block;
+	width:70%;
+	float:left;
+}
+
+.mainMenu button{
+	padding: 5px;
+	outline: none;
+}
+
 .inputRegEx{ text-align: center; }
 .inputRegEx h2{
 	margin:5%;
@@ -29,7 +66,10 @@
 	width:100%;
 	margin:2vw 0.1%;
 }
-.wrapperO{text-align: center;}
+
+.inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit]{ padding:2px; }
+
+.wrapperO{text-align: center; clear:both;}
 .spanLabel{display: inline-block;text-align: center;}
 .textQ { padding:1px;}
 .wrapperO button{padding:3px;outline: none;}
@@ -39,9 +79,8 @@
 	.inputRegEx p{ font-size:4.2vw; }
 	.inputRegEx button{ font-size: 3.5vw; }
 	.inputRegEx input{  font-size:3.5vw;}
-	.textQ { width:13.5vw; margin: 1vw 2vw;font-size: 5vw;}
-	.spanLabel {width:13.5vw; margin: 1vw 2vw;font-size: 5vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 5vw;}
+	.textQ , .spanLabel { width:13.5vw; margin: 1vw 2vw;font-size: 5vw;}
+	.rowLabel ,.inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] ,.inpFormWrapper form, .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 5vw;}
 }
 @media only screen and (min-width: 400px) {
   body {background-color: pink;}
@@ -49,9 +88,8 @@
 	.inputRegEx p{ font-size:3.3vw; }
 	.inputRegEx button{ font-size: 2.8vw; }
 	.inputRegEx input{  font-size:3vw;}
-	.textQ { width:14vw; margin: 1vw 2vw;font-size: 4vw;}
-	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 4vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 4vw;}
+	.textQ , .spanLabel { width:14vw; margin: 1vw 2vw;font-size: 4vw;}
+	.rowLabel , .inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] , .inpFormWrapper form , .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 4vw;}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -62,9 +100,8 @@
 	.inputRegEx button{ font-size: 3vw; }
 	.inputRegEx input{  font-size:3vw;}
 	.internalOtp{clear:none;width:33%;}
-	.textQ { width:14vw; margin: 1vw 2vw;font-size: 2.8vw;}
-	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 2.8vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 2.8vw;}
+	.textQ , .spanLabel { width:14vw; margin: 1vw 2vw;font-size: 2.8vw;}
+	.rowLabel , .inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] , .inpFormWrapper form , .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 2.8vw;}
 	.inpDiv{clear:none;width:49%;}
 }
 
@@ -75,9 +112,8 @@
 	.inputRegEx p{ font-size:2.8vw; }
 	.inputRegEx button{ font-size: 2.3vw; }
 	.inputRegEx input{  font-size:2.4vw; width:30vw;}
-	.textQ { width:14vw; margin: 1vw 2vw;font-size: 2.2vw;}
-	.spanLabel {width:14vw; margin: 1vw 2.5vw;font-size: 2.2vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 2.2vw;}
+	.textQ , .spanLabel { width:14vw; margin: 1vw 2vw;font-size: 2.2vw;}
+	.rowLabel , .inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] ,.inpFormWrapper form , .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 2.2vw;}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -87,9 +123,8 @@
 	.inputRegEx p{ font-size:2.3vw; }
 	.inputRegEx button{ font-size: 1.8vw; }
 	.inputRegEx input{  font-size:1.8vw; }
-	.textQ { width:12vw; margin: 1vw 2vw;font-size: 1.8vw;}
-	.spanLabel {width:12vw; margin: 1vw 2.5vw;font-size: 1.8vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 1.8vw;}
+	.textQ , .spanLabel { width:12vw; margin: 1vw 2vw;font-size: 1.8vw;}
+	.rowLabel , .inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] ,.inpFormWrapper form , .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 1.8vw;}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -99,7 +134,6 @@
 	.inputRegEx p{ font-size: 1.9vw; }
 	.inputRegEx button{ font-size: 1.5vw; }
 	.inputRegEx input{  font-size: 1.5vw; width:26vw;}
-	.textQ { width:10vw; margin: 1vw 2vw;font-size: 1.5vw;}
-	.spanLabel {width:10vw; margin: 1vw 2.5vw;font-size: 1.5vw;}
-	.rowLabel , .wrapperO button , .inpDiv p{font-size: 1.5vw;}
+	.textQ , .spanLabel { width:10vw; margin: 1vw 2vw;font-size: 1.5vw;}
+	.rowLabel , .inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] , .inpFormWrapper form , .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 1.5vw;}
 }
