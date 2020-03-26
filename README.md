@@ -9,8 +9,6 @@ Functions performed by the Web App :
 3. Regular Expreesion to DFA (Deterministic Finite Automata) Conversion
 4. String Acceptance For Regular Expression
 
-The Web app uses colorful nodes and edges graph visualization techniques to represent Finite Automatas and Visualize the String acceptance for Regular Expression.
-
 Tools/Concepts Implemented :
 
 1. Graphs (Bread First Search Traversal)
