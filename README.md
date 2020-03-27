@@ -11,7 +11,7 @@ Functions performed by the Web App :
 
 Tools/Concepts Implemented :
 
-1. Graphs (Bread First Search Traversal)
+1. Graphs (Breadth First Search Traversal)
 2. Data Structures and Algorithms
 3. Theory Of Computation (Finite Automatas and Regular Expressions)
 4. HTML , CSS , JavaScript
