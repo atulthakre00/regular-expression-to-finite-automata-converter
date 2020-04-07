@@ -83,7 +83,7 @@
 	.rowLabel ,.inpFormWrapper input[type=number] , .inpFormWrapper input[type=text] , .inpFormWrapper input[type=submit] ,.inpFormWrapper form, .inpFormWrapper input[type=submit] , .wrapperO button , .inpDiv p , .mainMenu button{font-size: 5vw;}
 }
 @media only screen and (min-width: 400px) {
-  body {background-color: pink;}
+  /*body {background-color: pink;}*/
   	.inputRegEx h2{  font-size:4.5vw; }
 	.inputRegEx p{ font-size:3.3vw; }
 	.inputRegEx button{ font-size: 2.8vw; }
@@ -94,7 +94,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
- body {background-color: yellow;}
+ /*body {background-color: yellow;}*/
  	.inputRegEx h2{  font-size:4vw; }
 	.inputRegEx p{ font-size:3.2vw; }
 	.inputRegEx button{ font-size: 3vw; }
@@ -107,7 +107,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  body {background-color: green;}
+  /*body {background-color: green;}*/
   	.inputRegEx h2{  font-size:3.9vw; }
 	.inputRegEx p{ font-size:2.8vw; }
 	.inputRegEx button{ font-size: 2.3vw; }
@@ -118,7 +118,7 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
- body {background-color: blue;}
+ /*body {background-color: blue;}*/
  	.inputRegEx h2{  font-size:3.4vw; }
 	.inputRegEx p{ font-size:2.3vw; }
 	.inputRegEx button{ font-size: 1.8vw; }
@@ -129,7 +129,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  	body{background-color: pink;}
+  	/*body{background-color: pink;}*/
   	.inputRegEx h2{  font-size: 2.5vw; }
 	.inputRegEx p{ font-size: 1.9vw; }
 	.inputRegEx button{ font-size: 1.5vw; }
